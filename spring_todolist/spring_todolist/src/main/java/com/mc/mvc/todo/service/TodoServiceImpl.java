@@ -39,7 +39,12 @@ public class TodoServiceImpl implements TodoService{
 	}
 	
 	
-	
+	@Override
+	public Map<String, Object> selectTodoContentByTodoIdx(int todoIdx) {
+		TodoList todolist = todoRepository.selectTodoByTodoIdx(todoIdx);
+		
+		return Map.of("todo", todolist);
+	}
 	
 	
 	

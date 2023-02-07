@@ -38,8 +38,16 @@ public class TodoController {
 	
 	private final TodoService todoService;
 	
+//	@GetMapping("todo-list")
+//	public String todoList(int todoIdx, Model model) {
+//		Map<String, Object> commandMap = todoService.selectTodoContentByTodoIdx(todoIdx);
+//		model.addAllAttributes(commandMap);
+//		return "todos";
+//	}
+	
 	@GetMapping("todo-list")
-	public void todoList() {}
+	public void todoList() {
+	}
 	
 	@PostMapping("addTodo")
     public String addTodo(TodoList todoList){
