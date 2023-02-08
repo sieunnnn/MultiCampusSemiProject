@@ -40,14 +40,20 @@ public class TodoServiceImpl implements TodoService{
 	
 	
 	@Override
-	public Map<String, Object> selectTodoContentByTodoIdx(int todoIdx) {
-		TodoList todolist = todoRepository.selectTodoByTodoIdx(todoIdx);
+	public Map<String, Object> selectTodoContentByTodoIdx() {
+		List<TodoList> todolist = todoRepository.selectTodo();
 		
 		return Map.of("todo", todolist);
 	}
 	
 	
-	
+	@Override
+	public void deleteTodoByTodoIdx(int todoIdx) {
+		
+		// 1. 삭제
+		todoRepository.deleteTodoByTodoIdx(todoIdx);
+		
+	}
 	
 	
 	

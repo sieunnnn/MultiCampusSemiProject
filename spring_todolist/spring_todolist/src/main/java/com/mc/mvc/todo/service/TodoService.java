@@ -10,11 +10,11 @@ public interface TodoService {
 
 //	FileInfo selectFileInfo(String fIdx);
 //
-	Map<String, Object> selectTodoContentByTodoIdx(int todoIdx);
+	Map<String, Object> selectTodoContentByTodoIdx();
 //
 //	Map<String, Object> selectBoardContentByBdIdx(int bdIdx);
 //
-//	void deleteTodoByTodoIdx(int todoIdx);
+	void deleteTodoByTodoIdx(int bdIdx);
 //
 //	void updateBoard(Board board, List<MultipartFile> fileList, List<String> delFiles);
 
