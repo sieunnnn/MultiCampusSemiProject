@@ -17,10 +17,13 @@ public interface TodoRepository {
 	@Options(useGeneratedKeys = true, keyProperty = "todoIdx")
 	void insertTodo(TodoList todolist);
 	
-	@Select("select * from todo where is_clear = 0 and todo_idx = #{todoIdx}")
-	TodoList selectTodoByTodoIdx(int todoIdx);
+//	@Select("select * from todo where is_clear = 0 and todo_idx = #{todoIdx}")
+//	TodoList selectTodoByTodoIdx(int todoIdx);
 	
-	@Update("update todo set is_clear = 1 where bd_idx = #{todoIdx}")
+	@Select("select * from todo where is_clear = 0")
+	List<TodoList> selectTodo();
+	
+	@Update("update todo set is_clear = 1 where todo_idx = #{todoIdx}")
 	void deleteTodoByTodoIdx(int todoIdx);
 	
 	@Select("select count(*) from todo where is_clear = 0")
