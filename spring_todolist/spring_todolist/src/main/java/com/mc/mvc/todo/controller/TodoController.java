@@ -15,17 +15,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttribute;
-import org.springframework.web.multipart.MultipartFile;
 
-import com.mc.mvc.board.dto.Board;
-import com.mc.mvc.board.service.BoardService;
-import com.mc.mvc.common.file.FileInfo;
-import com.mc.mvc.member.dto.Member;
 import com.mc.mvc.todo.dto.TodoList;
 import com.mc.mvc.todo.service.TodoService;
 
@@ -39,16 +32,18 @@ public class TodoController {
 	private final TodoService todoService;
 	
 //	@GetMapping("todo-list")
-//	public String todoList(int todoIdx, Model model) {
-//		Map<String, Object> commandMap = todoService.selectTodoContentByTodoIdx(todoIdx);
-//		model.addAllAttributes(commandMap);
-//		return "todos";
+//	public void todoList() {
+//		
 //	}
-	
+//	
 	@GetMapping("todo-list")
-	public void todoList() {
+	public String todoList(Model model) {
+		Map<String, Object> commandMap = todoService.selectTodoContentByTodoIdx();
+		model.addAllAttributes(commandMap);
+		System.out.println(commandMap);
+		return "/todo/todo-list";
 	}
-	
+
 	@PostMapping("addTodo")
     public String addTodo(TodoList todoList){
         //System.out.println(todo);
@@ -58,6 +53,12 @@ public class TodoController {
 
         return "redirect:/todo/todo-list";
     }
+	
+	@PostMapping("remove")
+	public String remove(int todoIdx) {
+		todoService.deleteTodoByTodoIdx(todoIdx);
+		return "redirect:/todo/todo-list";
+	}
 	
 	
 	//private final BoardService boardService;
