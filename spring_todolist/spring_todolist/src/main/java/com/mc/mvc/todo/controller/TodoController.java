@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
+import com.mc.mvc.member.dto.Member;
 import com.mc.mvc.todo.dto.TodoList;
 import com.mc.mvc.todo.service.TodoService;
 
@@ -45,10 +47,10 @@ public class TodoController {
 	}
 
 	@PostMapping("addTodo")
-    public String addTodo(TodoList todoList){
+    public String addTodo(TodoList todoList, @SessionAttribute Member auth){
         //System.out.println(todo);
 
-        todoList.setUserId("bjh");
+        todoList.setUserId(auth.getUserId());
         todoService.insertTodo(todoList);
 
         return "redirect:/todo/todo-list";
