@@ -27,13 +27,8 @@
 	
 	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
     	<property name="host" value="smtp.naver.com"/>
-<<<<<<< HEAD
-    	<property name="username" value="dcometb"></property>
+    	<property name="username" value=""></property>
     	<property name="password" value=""></property>
-=======
-    	<property name="username" value="rkqtl_"></property>
-    	<property name="password" value="kjoo0406**"></property>
->>>>>>> 2217d3bd8925b39f885198bd472d9979dfc6ad5c
     	<property name="port" value="465"></property>
     	
     	<!-- 
