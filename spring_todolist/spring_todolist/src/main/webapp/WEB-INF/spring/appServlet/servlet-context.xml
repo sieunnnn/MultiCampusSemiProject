@@ -39,6 +39,10 @@
 			<mapping path="/board/**"/>
 			<beans:bean class="com.mc.mvc.common.interceptor.BoardAuthInterceptor"></beans:bean>		
 		</interceptor>
+		<interceptor>
+			<mapping path="/todo/**"/>
+			<beans:bean class="com.mc.mvc.common.interceptor.TodoAuthInterceptor"></beans:bean>		
+		</interceptor>
 	</interceptors>
 
 	
