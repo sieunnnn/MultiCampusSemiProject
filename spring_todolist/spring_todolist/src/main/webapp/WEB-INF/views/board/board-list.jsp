@@ -9,8 +9,7 @@
 
 <div class="container">
 <div class="row">
- <h2 class="tit">* 게시판</h2>
-    <a href="${context}/board/board-form">게시글 쓰기</a>
+    <a href="${context}/board/board-form">당신의 일상을 보여주세용</a>
  	   <table style="text-align: center" border="1">
        <thead>
            <tr>

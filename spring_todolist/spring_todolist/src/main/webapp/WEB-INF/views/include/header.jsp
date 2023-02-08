@@ -8,7 +8,7 @@
 	      </a>
 	
 	      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-	        <li><a href="/" class="nav-link px-2 link-secondary">TodoList</a></li>
+	        <li><a href="/todo/todo-list" class="nav-link px-2 link-secondary">TodoList</a></li>
 	      </ul>
 		
 		<c:if test="${empty sessionScope.auth}">
