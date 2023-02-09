@@ -3,6 +3,29 @@
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
 <head>
 	<link href="/resources/css/board/board.css" rel="stylesheet"> 
+	
+	<!--  웹폰트 지정 -->
+<style>
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+	
+	body {
+    	font-family: 'LeferiBaseType-RegularA';
+    	font-size:20px;
+	}
+	
+</style>
 </head>
 <body>
 <%@ include file="/WEB-INF/views/include/header.jsp" %>

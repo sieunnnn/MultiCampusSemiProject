@@ -3,6 +3,22 @@
 <%@ include file="/WEB-INF/views/include/head.jsp" %>
 <head>
  <%@ include file="/WEB-INF/views/include/header.jsp" %>
+ 
+ <!--  웹폰트 지정 -->
+<style>
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+	
+	body {
+    	font-family: 'LeferiBaseType-RegularA';
+    	font-size:20px;
+	}
+</style>
+
 </head>
 <body>
    <h1>Todo List</h1>
