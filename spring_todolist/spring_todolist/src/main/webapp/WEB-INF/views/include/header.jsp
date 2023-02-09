@@ -9,6 +9,7 @@
 	
 	      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
 	        <li><a href="/index" class="nav-link px-2 link-secondary">Home</a></li>
+	        <li><a href="/todo/todo-list" class="nav-link px-2 link-secondary">TodoList</a></li>
 	      </ul>
 		
 		<c:if test="${empty sessionScope.auth}">
@@ -22,7 +23,6 @@
 	    <c:if test="${not empty sessionScope.auth}">
 	      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         	<li><a class="nav-link px-2 link-dark">${sessionScope.auth.userId}</a></li>
-        	<li><a href="/member/mypage" class="nav-link px-2 link-dark">MyPage</a></li>
         	<li><a href="/board/list" class="nav-link px-2 link-dark">Board</a></li>
         	<li><a href="/member/logout" class="btn btn-primary">Logout</a></li>
 	      </ul>
