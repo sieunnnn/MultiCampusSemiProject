@@ -38,13 +38,24 @@ public class TodoController {
 //		
 //	}
 //	
+//	@GetMapping("todo-list")
+//	public String todoList(Model model, Member member) {
+//		Map<String, Object> commandMap = todoService.selectTodoContentByTodoIdx(member);
+//		model.addAllAttributes(commandMap);
+//		System.out.println(commandMap);
+//		System.out.println(member);
+//		return "/todo/todo-list";
+//	}
 	@GetMapping("todo-list")
-	public String todoList(Model model) {
-		Map<String, Object> commandMap = todoService.selectTodoContentByTodoIdx();
+	public String todoList(Model model, @SessionAttribute Member auth) {
+		Map<String, Object> commandMap = todoService.selectTodoContentByTodoIdx(auth.getUserId());
 		model.addAllAttributes(commandMap);
 		System.out.println(commandMap);
+		System.out.println(auth.getUserId());
 		return "/todo/todo-list";
 	}
+	
+	
 
 	@PostMapping("addTodo")
     public String addTodo(TodoList todoList, @SessionAttribute Member auth){
