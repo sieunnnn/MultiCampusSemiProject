@@ -17,15 +17,14 @@
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
 
 <div class="container wrap_content">
-	<h1>회원 가입 양식</h1>
+	<h1 style="text-align:center">Sign up Now</h1>
 	
    <form:form action="${context}/member/signup" method="post" id="frmJoin"
    	modelAttribute="signUpForm" >
-      <table>
+      <table style="margin-left:auto; margin-right:auto;">
         <tr>
-           <td>ID : </td>
            <td>
-           	  <input type="text" name="userId" id="inpId" size="10" required/>
+           	  <input type="text" name="userId" id="inpId" size="10" required placeholder="Id"/>
               <button type="button" id="btnIdCheck">check</button>
               <span class="valid_info" id="idCheck"></span>
               <!-- path: 필드명 -->
@@ -33,24 +32,21 @@
            </td>
         </tr>
         <tr>
-           <td>PASSWORD : </td>
            <td>
-           	  <input type="password" name="password" id="pw" required/>
+           	  <input type="password" name="password" id="pw" required placeholder="password"/>
            	  <span id="pw_confirm" class="valid_info"></span>
            	  <form:errors path="password" cssClass="valid_info"/>
            </td>
         </tr>
         <tr>
-           <td>휴대폰번호 : </td>
            <td>
-           	  <input type="tel" name="tell" required/>
+           	  <input type="tel" name="tell" required placeholder="phone number"/>
            	  <form:errors path="tell" cssClass="valid_info"/>
            </td>
         </tr>
         <tr>
-           <td>email : </td>
            <td>
-           	  <input type="email" name="email" required/>
+           	  <input type="email" name="email" required placeholder="email"/>
            	  <form:errors path="email" cssClass="valid_info"/>
            </td>
         </tr>
