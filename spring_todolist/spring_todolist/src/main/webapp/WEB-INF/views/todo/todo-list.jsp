@@ -6,7 +6,7 @@
 
 <%@ include file="/WEB-INF/views/include/header.jsp"%>
 
-<section class="vh-100">
+<section class="vh-10">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col">

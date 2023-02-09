@@ -20,7 +20,7 @@ public interface TodoRepository {
 //	@Select("select * from todo where is_clear = 0 and todo_idx = #{todoIdx}")
 //	TodoList selectTodoByTodoIdx(int todoIdx);
 	
-	@Select("select * from todo where is_clear = 0")
+	@Select("select * from todo where is_clear = 0 and user_id = #{userId}")
 	List<TodoList> selectTodo();
 	
 	@Update("update todo set is_clear = 1 where todo_idx = #{todoIdx}")
