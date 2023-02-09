@@ -26,7 +26,7 @@
 <div class="container">
 <div class="row">
 <br><br><br><br>
-	<div style="text-align:left">
+	<div style="text-align:right">
     <a href="${context}/board/board-form"  class="btn btn-secondary btn-rounded" style="width:100px; height:35px; align:left">글쓰기</a>
     </div>
     <br><br>
