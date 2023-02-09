@@ -11,6 +11,7 @@
 <div class="row">
  <h2 class="tit">* 게시판</h2>
     <a href="${context}/board/board-form">게시글 쓰기</a>
+    <!--
  	   <table style="text-align: center" border="1">
        <thead>
            <tr>
@@ -31,6 +32,42 @@
         </c:forEach>
        </tbody>
     </table>
+    -->
+    
+    <table class="table align-middle mb-0 bg-white" style="text-align: center">
+	  <thead class="bg-light">
+	    <tr>
+	      <th style="width: 10%; height:20%;">번호</th>
+	      <th style="width: 70%; ">제목</th>
+	      <th style="width: 10%;">작성자</th>
+	      <th style="width: 10%;">등록일</th>
+	    </tr>
+	  </thead>
+  		<tbody>
+		  <c:forEach items="${boardList}" var="board">
+		    <tr>
+		    
+		      <td>
+		          
+		          <div class="ms-3">
+		            <p class="fw-normal mb-1">${board.bdIdx}</p>
+		          </div>
+		        
+		      </td>
+		      <td>
+		        <p class="fw-normal mb-1"><a href="${context}/board/detail?bdIdx=${board.bdIdx}">${board.title}</a></p>
+		      </td>
+		      
+		      <td>${board.userId}</td>
+		      <td>
+		        ${board.regDateAsTime}
+		      </td>
+		      
+		    </tr>
+		    </c:forEach>
+  		</tbody>
+		</table>
+    
 	</div>
 	
 	
