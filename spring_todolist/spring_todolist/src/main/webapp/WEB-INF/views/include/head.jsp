@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>멀티캠퍼스 웹개발 과정 :: 2조 세미프로젝트 입니다.</title>
 
 <c:set var="context" value="${pageContext.request.contextPath}"/>
 
