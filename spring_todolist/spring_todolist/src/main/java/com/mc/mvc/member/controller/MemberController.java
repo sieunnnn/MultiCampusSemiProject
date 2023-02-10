@@ -184,7 +184,7 @@ public class MemberController {
 	@GetMapping("logout")
 	public String logout(HttpSession session) {
 		session.removeAttribute("auth");
-		return "redirect:/member/login";
+		return "redirect:/";
 	}
 	
 	
