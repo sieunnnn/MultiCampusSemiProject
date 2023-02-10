@@ -11,5 +11,4 @@ public class TodoList {
 	private String todo;
 	private Boolean isClear;
 
-	
 }

@@ -15,8 +15,7 @@
 		<c:if test="${empty sessionScope.auth}">
 	      <div class="col-md-3 text-end">
         	<a href="/member/login" class="btn btn-outline-primary me-2">Login</a>
-        	<a href="/member/signup" class="btn btn-primary">Sign-up</a>
-        	
+        	<a href="/member/signup" class="btn btn-primary">Sign-up</a>     	
 	      </div>
 	    </c:if>
 	    

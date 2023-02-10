@@ -25,6 +25,7 @@
 
 <div class="container">
 <div class="row">
+
 <br><br><br><br>
 	<div style="text-align:right">
     <a href="${context}/board/board-form"  class="btn btn-secondary btn-rounded" style="width:100px; height:35px; align:left">글쓰기</a>
@@ -32,24 +33,41 @@
     <br><br>
  	   <table class="table align-middle mb-0 bg-white" style="text-align: center" >
        <thead class="bg-light">
-           <tr>
-               <th style="width: 10%; height:20%;"><span>번호</span></th>
-               <th style="width: 70%;"><span>제목</span></th>
-               <th style="width: 10%;"><span>작성자</span></th>
-               <th style="width: 10%;"><span>등록일</span></th>
-           </tr>
-       </thead>
-       <tbody >
-       <c:forEach items="${boardList}" var="board">
-           <tr >
-               <td>${board.bdIdx}</td>
-               <td style="text-align:left"><a href="${context}/board/detail?bdIdx=${board.bdIdx}">${board.title}</a></td>
-               <td>${board.userId}</td>
-               <td>${board.regDateAsTime}</td>
-           </tr>
-        </c:forEach>
-       </tbody>
-    </table>
+
+    <table class="table align-middle mb-0 bg-white" style="text-align: center">
+	  <thead class="bg-light">
+	    <tr>
+	      <th style="width: 10%; height:20%;">번호</th>
+	      <th style="width: 70%; ">제목</th>
+	      <th style="width: 10%;">작성자</th>
+	      <th style="width: 10%;">등록일</th>
+	    </tr>
+	  </thead>
+  		<tbody>
+		  <c:forEach items="${boardList}" var="board">
+		    <tr>
+		    
+		      <td>
+		          
+		          <div class="ms-3">
+		            <p class="fw-normal mb-1">${board.bdIdx}</p>
+		          </div>
+		        
+		      </td>
+		      <td>
+		        <p class="fw-normal mb-1"><a href="${context}/board/detail?bdIdx=${board.bdIdx}">${board.title}</a></p>
+		      </td>
+		      
+		      <td>${board.userId}</td>
+		      <td>
+		        ${board.regDateAsTime}
+		      </td>
+		      
+		    </tr>
+		    </c:forEach>
+  		</tbody>
+		</table>
+    
 	</div>
 	
 	
