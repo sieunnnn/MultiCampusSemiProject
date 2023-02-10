@@ -33,10 +33,7 @@ public class TodoServiceImpl implements TodoService{
 	
 	@Override
 	public void deleteTodoByTodoIdx(int todoIdx) {
-		
-		// 1. 삭제
 		todoRepository.deleteTodoByTodoIdx(todoIdx);
-		
 	}
 	
 	
