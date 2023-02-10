@@ -64,7 +64,7 @@ body {
 								</p>
 							</td>
 							<td>${board.userId}</td>
-							<td>${board.regDateAsTime}</td>
+							<td>${board.regDateAsDate} ${board.regDateAsTime}</td>
 						</tr>
 					</c:forEach>
 				</tbody>
