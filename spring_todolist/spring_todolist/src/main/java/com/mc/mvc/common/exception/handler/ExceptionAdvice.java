@@ -51,7 +51,7 @@ public class ExceptionAdvice {
 		// logger에 두번째 매개변수로 Exception 객체를 넘기면 stacktrace를 출력해준다.
 		logger.error("{}", e);
 		model.addAttribute("msg", "데이터베이스 접속에 문제가 생겼습니다.");
-		model.addAttribute("redirect", "/index");
+		model.addAttribute("redirect", "/");
 		return "common/alert-message";
 	}
 	

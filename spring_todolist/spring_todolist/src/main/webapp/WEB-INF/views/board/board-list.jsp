@@ -45,9 +45,9 @@ body {
 				<thead class="bg-light">
 					<tr>
 						<th style="width: 10%; height: 20%;">번호</th>
-						<th style="width: 70%;">제목</th>
+						<th style="width: 65%;">제목</th>
 						<th style="width: 10%;">작성자</th>
-						<th style="width: 10%;">등록일</th>
+						<th style="width: 15%;">등록일</th>
 					</tr>
 				</thead>
 				<tbody>
