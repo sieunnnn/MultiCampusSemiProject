@@ -23,7 +23,6 @@
 
 <body>
 
-<%@ include file="/WEB-INF/views/include/header.jsp"%>
 
 <section class="vh-10">
   <div class="container py-5 h-100">
