@@ -8,7 +8,7 @@
 		.valid_info{
 			display:block; 
 			color:red;
-			font-size: 0.5vw;
+			font-size: 1vw;
 		}
 	</style>
 </head>
@@ -79,8 +79,8 @@
         </tr>
         <tr>
            <td>
-              <input type="submit" id="btnIdCheck" class="btn btn-primary"   style="margin-top:15px; width:70px" value="가입" />
-              <input type="reset"  id="btnIdCheck"  class="btn btn-secondary" data-mdb-ripple-color="light"   style="margin-top:15px; width:70px" value="취소" />
+              <input type="submit" class="btn btn-primary"   style="margin-top:15px; width:70px" value="가입" />
+              <input type="reset" class="btn btn-secondary" data-mdb-ripple-color="light"   style="margin-top:15px; width:70px" value="취소" />
            </td>
        </tr>
    </table>
