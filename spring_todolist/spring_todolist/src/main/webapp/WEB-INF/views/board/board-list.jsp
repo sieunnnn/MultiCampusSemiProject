@@ -58,7 +58,7 @@ body {
 									<p class="fw-normal mb-1">${board.bdIdx}</p>
 								</div>
 							</td>
-							<td>
+							<td style="text-align:left">
 								<p class="fw-normal mb-1">
 									<a href="${context}/board/detail?bdIdx=${board.bdIdx}">${board.title}</a>
 								</p>
