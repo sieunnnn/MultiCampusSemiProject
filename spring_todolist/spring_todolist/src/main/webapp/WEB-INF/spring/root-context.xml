@@ -18,7 +18,7 @@
 		<!-- &가 xml에서 참조자로 사용되기 때문에 &amp; 로 대체하여 사용 -->
 		<property name="url" value="jdbc:mysql://localhost:3306/bookmanager?useUnicode=true&amp;characterEncoding=utf8"/>
 		<property name="username" value="root" />
-		<property name="password" value="123qwe!@#QWE"/>
+		<property name="password" value=""/>
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
 	</bean>
 	
@@ -27,8 +27,8 @@
 	
 	<bean id="javaMailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
     	<property name="host" value="smtp.naver.com"/>
-    	<property name="username" value="rkqtl_"></property>
-    	<property name="password" value="kjoo0406**"></property>
+    	<property name="username" value=""></property>
+    	<property name="password" value=""></property>
     	<property name="port" value="465"></property>
     	
     	<!-- 
