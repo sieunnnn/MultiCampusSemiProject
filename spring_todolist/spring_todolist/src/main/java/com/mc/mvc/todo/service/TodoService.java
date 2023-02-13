@@ -1,5 +1,8 @@
 package com.mc.mvc.todo.service;
 
+import java.util.Map;
+
+import com.mc.mvc.member.dto.Member;
 import com.mc.mvc.todo.dto.TodoList;
 
 public interface TodoService {
@@ -8,11 +11,11 @@ public interface TodoService {
 
 //	FileInfo selectFileInfo(String fIdx);
 //
-//	Map<String, Object> selectBoardList(int page);
+	Map<String, Object> selectTodoContentByTodoIdx(String userId);
 //
 //	Map<String, Object> selectBoardContentByBdIdx(int bdIdx);
 //
-//	void deleteBoardByBdIdx(int bdIdx);
+	void deleteTodoByTodoIdx(int todoIdx);
 //
 //	void updateBoard(Board board, List<MultipartFile> fileList, List<String> delFiles);
 

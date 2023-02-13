@@ -115,7 +115,7 @@ public class MemberController {
 		session.setAttribute("authToken", authToken);
 		
 		memberService.authenticateEmail(form, authToken);
-		return "redirect:/index";
+		return "redirect:/member/login";
 	}
 	
 	// @PathVariable : url에서 특정위치의 값을 컨트롤러의 매개변수에 바인드해준다.
@@ -139,7 +139,7 @@ public class MemberController {
 		// 세션에 저장된 토큰을 삭제
 		session.removeAttribute("authToken");
 		
-		return "redirect:/index";
+		return "redirect:/member/login";
 	}
 	
 	@GetMapping("/checkId")
@@ -166,7 +166,7 @@ public class MemberController {
 		}
 		
 		session.setAttribute("auth", auth);
-		return "redirect:/index";
+		return "redirect:/todo/todo-list";
 	}
 	
 	@GetMapping("mypage")
@@ -184,7 +184,7 @@ public class MemberController {
 	@GetMapping("logout")
 	public String logout(HttpSession session) {
 		session.removeAttribute("auth");
-		return "redirect:/index";
+		return "redirect:/";
 	}
 	
 	

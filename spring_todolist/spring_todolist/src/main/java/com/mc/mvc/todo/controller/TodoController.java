@@ -15,16 +15,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
-import org.springframework.web.multipart.MultipartFile;
 
-import com.mc.mvc.board.dto.Board;
-import com.mc.mvc.board.service.BoardService;
-import com.mc.mvc.common.file.FileInfo;
 import com.mc.mvc.member.dto.Member;
 import com.mc.mvc.todo.dto.TodoList;
 import com.mc.mvc.todo.service.TodoService;
@@ -38,18 +33,45 @@ public class TodoController {
 	
 	private final TodoService todoService;
 	
+//	@GetMapping("todo-list")
+//	public void todoList() {
+//		
+//	}
+//	
+//	@GetMapping("todo-list")
+//	public String todoList(Model model, Member member) {
+//		Map<String, Object> commandMap = todoService.selectTodoContentByTodoIdx(member);
+//		model.addAllAttributes(commandMap);
+//		System.out.println(commandMap);
+//		System.out.println(member);
+//		return "/todo/todo-list";
+//	}
 	@GetMapping("todo-list")
-	public void todoList() {}
+	public String todoList(Model model, @SessionAttribute Member auth) {
+		Map<String, Object> commandMap = todoService.selectTodoContentByTodoIdx(auth.getUserId());
+		model.addAllAttributes(commandMap);
+		System.out.println(commandMap);
+		System.out.println(auth.getUserId());
+		return "/todo/todo-list";
+	}
 	
+	
+
 	@PostMapping("addTodo")
-    public String addTodo(TodoList todoList){
+    public String addTodo(TodoList todoList, @SessionAttribute Member auth){
         //System.out.println(todo);
 
-        todoList.setUserId("bjh");
+        todoList.setUserId(auth.getUserId());
         todoService.insertTodo(todoList);
 
         return "redirect:/todo/todo-list";
     }
+	
+	@PostMapping("remove")
+	public String remove(int todoIdx) {
+		todoService.deleteTodoByTodoIdx(todoIdx);
+		return "redirect:/todo/todo-list";
+	}
 	
 	
 	//private final BoardService boardService;

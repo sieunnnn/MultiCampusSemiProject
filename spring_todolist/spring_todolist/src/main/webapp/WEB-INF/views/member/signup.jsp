@@ -8,62 +8,98 @@
 		.valid_info{
 			display:block; 
 			color:red;
-			font-size: 0.5vw;
+			font-size: 1vw;
 		}
 	</style>
 </head>
 
+<!--  웹폰트 지정 -->
+<style>
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+	
+	body {
+    	font-family: 'LeferiBaseType-RegularA';
+    	font-size:20px;
+	}
+</style>
+
 <body>
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
 
-<div class="container wrap_content">
-	<h1>회원 가입 양식</h1>
-	
+<div style="background-color: #eee;">
+<br><br>
+<div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+ 	<section class="h-100 gradient-form wrap_content" >
+	<div class="container wrap_content" >
+	<br>
+	<br>
+	<h1 style="text-align:center; font-weight:bold">Sign up Now</h1>
+	<br>
+	<center><img src="../../../resources/img/signup.png"  style="width:200px; height:200px"/></center>
    <form:form action="${context}/member/signup" method="post" id="frmJoin"
    	modelAttribute="signUpForm" >
-      <table>
+      <table class="table table-borderless"  style="text-align:center ; font-size:15px" >
         <tr>
-           <td>ID : </td>
            <td>
-           	  <input type="text" name="userId" id="inpId" size="10" required/>
-              <button type="button" id="btnIdCheck">check</button>
+           	  <input type="text" name="userId" id="inpId" size="22"  style="height:30px" required placeholder="Id"/>
+              <button type="button" id="btnIdCheck" class="btn btn-primary btn-block mb-4"   style="margin-top:23px">check</button>
               <span class="valid_info" id="idCheck"></span>
               <!-- path: 필드명 -->
               <form:errors path="userId" cssClass="valid_info"/>
            </td>
         </tr>
         <tr>
-           <td>PASSWORD : </td>
-           <td>
-           	  <input type="password" name="password" id="pw" required/>
+           <td align="center">
+           	  <input type="password" name="password" id="pw" class="form-label"  size="30"  style="height:30px" required placeholder="password"/>
            	  <span id="pw_confirm" class="valid_info"></span>
            	  <form:errors path="password" cssClass="valid_info"/>
            </td>
         </tr>
         <tr>
-           <td>휴대폰번호 : </td>
            <td>
-           	  <input type="tel" name="tell" required/>
+           	  <input type="tel" name="tell" class="form-label"  size="30"  style="height:30px" required placeholder="phone number"/>
            	  <form:errors path="tell" cssClass="valid_info"/>
            </td>
         </tr>
         <tr>
-           <td>email : </td>
            <td>
-           	  <input type="email" name="email" required/>
+           	  <input type="email" name="email"   class="form-label"  size="30"  style="height:30px" required placeholder="email"/>
            	  <form:errors path="email" cssClass="valid_info"/>
            </td>
         </tr>
         <tr>
            <td>
-              <input type="submit" value="가입" />
-              <input type="reset" value="취소" />
+              <input type="submit" class="btn btn-primary"   style="margin-top:15px; width:70px" value="가입" />
+              <input type="reset" class="btn btn-secondary" data-mdb-ripple-color="light"   style="margin-top:15px; width:70px" value="취소" />
            </td>
        </tr>
    </table>
    </form:form>
 
 </div>
+<br>
+<br>
+</section>
+</div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+
+<br>
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
 
 

@@ -81,7 +81,9 @@ public class BoadController {
 	@PostMapping("remove")
 	public String remove(int bdIdx) {
 		boardService.deleteBoardByBdIdx(bdIdx);
-		return "redirect:/index";
+
+		return "redirect:/board/list";
+
 	}
 	
 	@GetMapping("modify")
