@@ -26,6 +26,10 @@
 <a href="https://github.com/Joongjii">
 	<img src="https://user-images.githubusercontent.com/119668620/218946773-e13b4aa2-b306-4a51-b0d8-eaaefde2a3be.png" width="22%" height="22%" "현중 조원의 깃허브 바로가기">
 <a>
+&emsp;
+<a href="https://github.com/joonhyung2">
+	<img src="https://user-images.githubusercontent.com/119668620/218948439-f40e7fc6-02d1-4489-979d-d5f5e26675ac.png" width="22%" height="22%" "준형 조원의 깃허브 바로가기">
+<a>
 
 
 <br>
